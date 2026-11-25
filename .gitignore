@@ -1,0 +1,17 @@
+# Credenciales temporales de AWS Learner Lab (NUNCA subir a Git)
+aws_credentials.txt
+.env
+*.pem
+*.ppk
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Archivos temporales de empaquetado y estado de despliegue
+infra/.deployment_state.json
+infra/build/
+*.zip

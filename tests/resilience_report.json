@@ -1,0 +1,38 @@
+{
+  "executed_at": "2026-11-25T02:45:47.171840+00:00",
+  "target_url": "http://pulseguard-alb-2010215791.us-east-1.elb.amazonaws.com",
+  "experiments": [
+    {
+      "name": "Failover Multi-AZ EC2 + Application Load Balancer",
+      "status": "PASSED",
+      "nodes_before": [
+        "i-07ecf4a840ba95107",
+        "i-0d094c37434fb3382"
+      ],
+      "failed_node": "i-0d094c37434fb3382",
+      "surviving_nodes_responding": [
+        "i-07ecf4a840ba95107",
+        "i-0d094c37434fb3382"
+      ],
+      "availability_during_failure_pct": 100.0,
+      "successful_probes": "8/8"
+    },
+    {
+      "name": "Aislamiento de Mensaje Corrupto en Dead Letter Queue (SNS -> Lambda -> DLQ)",
+      "status": "PASSED",
+      "poison_message_id": "752da9a5-4b92-54cc-a458-ca2505bab8db",
+      "healthy_metric_id": "chaos-healthy-1795574767",
+      "healthy_message_processed_cleanly": true,
+      "dlq_isolated_messages": 2
+    },
+    {
+      "name": "Absorci\u00f3n de R\u00e1faga Concurrente (Asynchronous Load Leveling)",
+      "status": "PASSED",
+      "events_sent": 30,
+      "events_accepted": 30,
+      "packet_loss_pct": 0.0,
+      "total_ingestion_time_ms": 1013.01,
+      "avg_latency_per_event_ms": 33.77
+    }
+  ]
+}
